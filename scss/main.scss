@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+$font-family-sans-serif : 'Public Sans', sans-serif;
+
+
+
+$secondary: hsl(233, 8%, 62%);
+$primary: hsl(220, 16%, 96%);
+$green: hsl(136, 65%, 51%);
+$dark: hsl(233, 26%, 24%);
+$info: hsl(192, 70%, 51%);
+$white: hsl(0, 0%, 100%);
+$light: hsl(0, 0%, 98%);
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.img-one{
+    transform: translate(-100px,-200px);
+}
+
+.img-two{
+    top: -50px;
+    right: -100px;
+}
+
+.header{
+    min-height: 75vh;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    border-bottom: 3px solid $success;
+}
+
+.btn{
+    padding: 12px 32px !important;
+    background: linear-gradient(to right, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+}
+
+.card h5{
+    transition: 0.3s;
+
+    &:hover{
+        color: $success;
+    }
+}
+
+.blog-img{
+    height: 200px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.foot-text p{
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.foot-text p:hover{
+    color: $success !important;
+}
+
+.foot-icon{
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.foot-icon:hover{
+    fill: $success !important;
+}
+
+.foot-icons svg{
+    margin-right: 5px;
+}
+
+
+@include media-breakpoint-down(sm) { 
+    .img-two{
+        width: 90% !important;
+        top: -45px;
+        right: 20px;
+        z-index: 1 !important;
+    }
+
+    .home{
+        min-height: 100vh !important;
+    }
+
+    .home-p{
+        font-size: 15px !important;
+    }
+
+    .btn{
+        padding: 10px 30px !important;
+    }
+
+    .mobile-nav{
+        top: 10% !important;
+        margin: 20px;
+        transform: translateX(-200%);
+        transition: 0.3s;
+    }
+
+    .mobile-nav.show{
+        transform: translateX(0px);
+    }
+ }
